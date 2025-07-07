@@ -1,13 +1,15 @@
 import './App.css'
-import { Button } from "@/components/ui/button"
+import { ModeToggle } from './components/darkmode/mode-toggle'
+import { ThemeProvider } from './components/darkmode/theme-provider'
+import LandingPage from './components/landing-page/LandingPage'
 
 function App() {
 
   return (
-    <section>
-      <h3>Arcado</h3>
-      <Button>pay now</Button>
-    </section>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <ModeToggle/>
+      <LandingPage/>
+    </ThemeProvider>
   )
 }
 
